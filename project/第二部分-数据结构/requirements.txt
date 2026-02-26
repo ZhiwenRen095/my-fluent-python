@@ -1,0 +1,23 @@
+# 高性能数据结构项目依赖
+# 基于《流畅的Python》的最佳实践
+
+# 测试框架（可选，用于运行测试）
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+
+# 性能分析工具（可选）
+# line_profiler>=4.0.0
+# memory_profiler>=0.60.0
+
+# 类型检查（可选）
+# mypy>=1.0.0
+# types-python>=0.1.0
+
+# 代码格式化（可选）
+# black>=23.0.0
+# isort>=5.12.0
+
+# 注意：本项目主要使用 Python 标准库
+# collections.deque 和 heapq 都是标准库的一部分
+# 无需额外安装依赖即可运行
+
