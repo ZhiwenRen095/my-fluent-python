@@ -1,3 +1,4 @@
+import numbers
 from array import array
 import reprlib
 import math
@@ -43,4 +44,11 @@ class Vector:
         return len(self._components)
 
     def __getitem__(self, index):
-        return self._components[index]
+        cls = type(self)
+        if isinstance(index, slice):
+            return cls(self._components[index])
+        elif isinstance(index, numbers.Integral):
+            return cls(self._components[index])
+        else:
+            msg = '{cls.__name__} indices must be integers'
+            raise TypeError(msg.format(cls=cls))
