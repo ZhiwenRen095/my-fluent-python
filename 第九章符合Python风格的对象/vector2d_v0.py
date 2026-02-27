@@ -35,3 +35,9 @@ class Vector2d:
 
     def __bool__(self):
         return bool(abs(self))
+
+    @classmethod
+    def from_bytes(cls, data):
+        typecode = chr(data[0])
+        memv = memoryview(data[1:]).cast(typecode)
+        return cls(*memv)
