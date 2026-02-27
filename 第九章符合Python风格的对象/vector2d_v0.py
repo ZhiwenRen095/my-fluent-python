@@ -49,3 +49,6 @@ class Vector2d:
         typecode = chr(data[0])
         memv = memoryview(data[1:]).cast(typecode)
         return cls(*memv)
+
+    def __hash__(self):
+        return hash(self.x) ^ hash(self.y)
